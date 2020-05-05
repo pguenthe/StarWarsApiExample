@@ -1,7 +1,10 @@
-{{myPerson.name}} of {{myPerson.homeworld}}
+{{myPerson.name}} of 
+<app-planet-view [url]="myPerson.homeworld"></app-planet-view>
 <div>
     Appears in:
     <ul>
-        <li *ngFor="let f of myPerson.films">{{f}}</li>
+        <li *ngFor="let f of myPerson.films">
+            <app-film-view [url]="f"></app-film-view>
+        </li>
     </ul>
 </div>
